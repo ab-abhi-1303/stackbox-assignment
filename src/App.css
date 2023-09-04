@@ -1,38 +1,68 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 4px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.square {
+  width: 100px;
+  height: 100px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f0f0f0;
+  font-size: 36px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.square:hover {
+  background-color: #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square.winner {
+  background-color: #8bc34a; /* Green color for winning squares */
+  color: #fff;
+}
+
+.status {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.symbol-selection {
+  font-size: 20px;
+}
+
+.symbol-selection p {
+  margin-bottom: 10px;
+}
+
+.symbol-selection button {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.symbol-selection button:hover {
+  background-color: #0d47a1; /* Darker blue on hover */
 }
